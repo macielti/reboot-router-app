@@ -36,7 +36,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = kivy
+requirements = kivy,requests
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -52,7 +52,7 @@ requirements = kivy
 #icon.filename = %(source.dir)s/data/icon.png
 
 # (str) Supported orientation (one of landscape, portrait or all)
-orientation = landscape
+orientation = all
 
 # (list) List of service to declare
 #services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
