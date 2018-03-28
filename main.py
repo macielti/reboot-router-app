@@ -1,10 +1,15 @@
+#para requisição ao roteador
 import requests
+#importa classe APP do módulo kivy
 from kivy.app import App
+#importa BoxLayout do módulo Kivy
 from kivy.uix.boxlayout import BoxLayout
 
 class Tela(BoxLayout):
+    """Classe da tela principal do aplicativo"""
     
     def login(self):
+        """Requisita a função de Loguin do roteador."""
         cookies = {
             'login': '`elho.`elho.r`wd',
         }
@@ -23,12 +28,12 @@ class Tela(BoxLayout):
         }
 
         data = 'loginUsername=admin&loginPassword=admin&rememberMe=rememberMe'
-
+        #faz a requisição de login
         response = requests.post('http://192.168.1.1/goform/login', headers=headers, cookies=cookies, data=data, verify=False)
         
 
     def reboot(self):
-        
+        """Requista a função de reiniciar o roteador"""
         
         self.login()
     
